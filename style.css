@@ -94,7 +94,7 @@ body {
 .container {
   height: 100%;
   display: grid;
-  grid-template: 1fr 4fr / 1fr 5fr;
+  grid-template: 9rem 4fr / 1fr 5fr;
 }
 /* sidebar */
 .sidebar {
@@ -147,10 +147,12 @@ body {
   padding: var(--padding-default);
   grid-column: 2 / 3;
 
+  padding-right: 5rem;
+
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 1fr 1.5fr;
-  gap: 1rem;
+  gap: 0.5rem;
 
   font-weight: bold;
 }
@@ -158,8 +160,8 @@ body {
 .search-bar {
   display: grid;
   grid-template-columns: 1fr 10fr;
-  padding: 0rem 7rem 0rem 2rem;
   align-items: center;
+  gap: 1rem;
 }
 .search-bar input {
   max-height: 2.5rem;
@@ -172,7 +174,7 @@ body {
 }
 
 img[src*="pp"] {
-  height: 50px;
+  height: 70%;
   border-radius: 50px;
 }
 
@@ -181,35 +183,41 @@ img[src*="pp"] {
 }
 
 .header img {
-  justify-self: end;
-  padding-right: 1rem;
+  justify-self: flex-end;
 }
 
 .user-notif {
   display: grid;
-  grid-template-columns: 1fr 1fr 4fr;
+  grid-template-columns: 2fr 1fr 4fr;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .user-greeting {
   display: grid;
-  padding: 1rem 2rem;
   grid-template-columns: 1fr 7fr;
   align-items: center;
+  gap: 1rem;
+}
+.user-greeting p {
+  font-weight: 400;
+  font-size: 0.75rem;
 }
 
 .user-actions {
-  display: flex;
-  justify-content: left;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  gap: 2rem;
+  justify-items: stretch;
+  gap: 1.5rem;
 }
 
 .action {
   background-color: var(--color-default);
   padding: 0.5rem 1rem;
-  border-radius: 15px;
+  border-radius: 20px;
   color: white;
+  text-align: center;
 }
 /* main */
 .main {
@@ -217,4 +225,27 @@ img[src*="pp"] {
   box-shadow: inset 0px 3px 8px 0px rgb(145, 145, 145);
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1.5rem 1fr 1.5rem 1fr;
+
+  padding: 2rem 1rem;
+  gap: 1rem;
+}
+
+.project-title {
+}
+
+.your-projects {
+  display: grid;
+  grid-row: 2 / 5;
+}
+
+.annoucements {
+  display: grid;
+}
+
+.trending {
+  display: grid;
 }
