@@ -84,6 +84,7 @@ h6 {
   --padding-default: 0.5rem;
   --color-default: rgb(43, 170, 239);
   --box-shadow-default: 0px 2px 5px lightgray;
+  --color-secondary: rgb(66, 114, 66);
 }
 
 html,
@@ -222,7 +223,7 @@ body {
 }
 
 .action {
-  background-color: var(--color-default);
+  background-color: var(--color-secondary);
   padding: 0.5rem 1rem;
   border-radius: 30px;
   color: white;
@@ -246,7 +247,8 @@ body {
   gap: 1rem;
 }
 
-.project-title {
+.title {
+  font-weight: 600;
 }
 
 .your-projects {
@@ -258,9 +260,38 @@ body {
 }
 
 .project-card {
-  background-color: pink;
   border-radius: var(--border-radius-default);
   box-shadow: var(--box-shadow-default);
+
+  border-left: 7.5px solid var(--color-secondary);
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5rem 1fr 2rem;
+}
+.project-card .title {
+}
+
+.project-card p {
+  font-size: 0.75rem;
+}
+
+.project-actions {
+  width: minmax(50%, 75%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: end;
+  justify-self: end;
+  gap: 1rem;
+}
+.project-actions .icon-action {
+  width: 2rem;
+  height: 2rem;
+}
+
+.project-actions img {
+  max-height: 100%;
 }
 
 .announcements {
@@ -269,24 +300,20 @@ body {
   border-radius: var(--border-radius-default);
   box-shadow: var(--box-shadow-default);
 
-  padding: 0.5rem;
-  gap: 0.1rem;
+  padding: 1rem;
 }
 
-.announcement-card {
-  background-color: pink;
+.announcement-card:not(:last-child) {
+  border-bottom: 1px solid lightgrey;
 }
-
 .trending {
   border-radius: var(--border-radius-default);
   box-shadow: var(--box-shadow-default);
 
   display: grid;
   grid-template-rows: repeat(auto-fit, 1fr);
-  gap: 0.1rem;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .trending-card {
-  background-color: pink;
 }
